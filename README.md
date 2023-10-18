@@ -6,6 +6,8 @@ Generative models are often sampled multiple times to obtain a diverse set incur
 
 If you have questions, don't hesitate to open an issue or send us an email at gcorso@mit.edu and ylxu@mit.edu.
 
+![i.i.d](stable_diffusion/assets/main_figure.png)
+
 ## Synthetic experiments
 
 For our synthetic experiments on mixture of Gaussians distribution see the `synthetic.ipynb` notebook.
