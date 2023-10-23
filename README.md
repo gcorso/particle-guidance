@@ -1,6 +1,6 @@
 # Particle Guidance 
 
-Implementation of Particle Guidance: non-I.I.D. Diverse Sampling with Diffusion Models by Gabriele Corso, Yilun Xu, Valentin de Bortoli, Regina Barzilay and Tommi Jaakkola.
+Implementation of [Particle Guidance: non-I.I.D. Diverse Sampling with Diffusion Models](https://arxiv.org/abs/2310.13102) by Gabriele Corso, Yilun Xu, Valentin de Bortoli, Regina Barzilay and Tommi Jaakkola.
 
 Generative models are often sampled multiple times to obtain a diverse set incurring in a cost that is orthogonal to sampling time. To improve diversity and sample efficiency we need to move beyond the common assumption of independent samples. Particle guidance is an extension of diffusion-based generative sampling where a joint-particle time-evolving potential enforces diversity. In our manuscript analyze theoretically the joint distribution that particle guidance generates, its implications on the choice of potential, and the connections with methods in other disciplines. Here you can find the code for our empirical experiments. We test the framework both in the setting of conditional image generation, where we are able to increase diversity without affecting quality, and molecular conformer generation, where we reduce the state-of-the-art median error by 13% on average.
 
@@ -77,3 +77,15 @@ For the non-permutation invariant kernel guidance (faster, slightly lower qualit
     # minimizing precision error
     python generate_confs.py --tqdm --batch_size 128 --no_energy --inference_steps=20 --model_dir=workdir/drugs_default --test_csv=data/DRUGS/test_smiles.csv --pg_kernel_size_log_0=1.29503 --pg_kernel_size_log_1=1.45944 --pg_langevin_weight_log_0=-2.88867 --pg_langevin_weight_log_1=-2.47591 --pg_repulsive_weight_log_0=-1.01222 --pg_repulsive_weight_log_1=-1.91253 --pg_weight_log_0=-0.16253 --pg_weight_log_1=0.79355
 
+
+
+## Citation
+    @article{corso2023particle,
+          title={Particle Guidance: non-I.I.D. Diverse Sampling with Diffusion Models}, 
+          author = {Corso, Gabriele and Xu, Yilun and de Bortoli, Valentin and Barzilay, Regina and Jaakkola, Tommi},
+          journal={arXiv},
+          year={2023}
+    }
+
+## License
+MIT
